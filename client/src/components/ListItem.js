@@ -49,9 +49,11 @@ const ListItem = (props) => {
       {!props.completed && 
       <i className='fas fa-check-circle complete-icon cursor-pointer' onClick={clickToComplete}></i> 
       } 
+      <div>
       <p className={props.completed ? 'm-3 line-through d-inline' : 'm-3 d-inline' }>
         {props.title}
       </p>
+      </div>
       <i className='fas fa-trash-alt float-right  cursor-pointer delete-icon' onClick={clickToDelete} i> </i>
     </div>
   </li>
