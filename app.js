@@ -11,13 +11,6 @@ require('./services/passport')
 const path = require('path')
 
 const app = express()
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static(path.join(__dirname, 'client/build')));
-//   app.get('/*', function(req, res) {
-//     res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-//   });
-// }
-
 const port = process.env.PORT || 4000
 
 
@@ -40,9 +33,7 @@ app.use(express.json())
 app.use(
   cookieSession({
     maxAge: 30 * 24 * 60 * 60 * 1000,
-    keys: [process.env.COOKIE_KEY],
-    // Enable the cookie to be altered on the front-end
-    httpOnly: false
+    keys: [process.env.COOKIE_KEY]
   })
 )
 app.use(passport.initialize())
