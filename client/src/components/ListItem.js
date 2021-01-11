@@ -44,16 +44,14 @@ const ListItem = (props) => {
   }
 
   return (
-  <li className='list-unstyled bg-white border p-2 m-2 rounded list-item shadow-sm '>
-    <div>
+  <li className='list-unstyled bg-white border p-2 m-2 rounded list-item shadow-sm'>
+    <div className='d-block'>
       {!props.completed && 
       <i className='fas fa-check-circle complete-icon cursor-pointer' onClick={clickToComplete}></i> 
       } 
-      <div>
       <p className={props.completed ? 'm-3 line-through d-inline' : 'm-3 d-inline' }>
         {props.title}
       </p>
-      </div>
       <i className='fas fa-trash-alt float-right  cursor-pointer delete-icon' onClick={clickToDelete} i> </i>
     </div>
   </li>
