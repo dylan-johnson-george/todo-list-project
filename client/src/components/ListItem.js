@@ -2,7 +2,6 @@ import axios from 'axios'
 import '../index.css'
 import { fetchTodos } from '../redux/actions/index'
 import { useDispatch } from 'react-redux'
-import serverDomain from '../utils.js/serverDomain'
 
 const ListItem = (props) => {
 
@@ -11,7 +10,7 @@ const ListItem = (props) => {
   const clickToComplete = async (e) => {    
     await axios({
       method: 'put',
-      url: `${serverDomain}/todos`,
+      url: `http://localhost:4000/todos`,
       data: {
         id: props.id
 
@@ -29,7 +28,7 @@ const ListItem = (props) => {
     try {
       await axios({
         method: 'delete',
-        url: `${serverDomain}/todos`,
+        url: `http://localhost:4000/todos`,
         data: {
           id: props.id
         },

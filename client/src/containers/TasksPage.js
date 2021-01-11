@@ -4,7 +4,6 @@ import axios from 'axios'
 import ListItem from '../components/ListItem'
 import { fetchTodos } from '../redux/actions/index'
 import { useDispatch, useSelector} from 'react-redux'
-import serverDomain from '../utils.js/serverDomain'
 
 const TasksPage = () => {
   const dispatch = useDispatch()
@@ -19,7 +18,7 @@ const TasksPage = () => {
     try {
       const newTodo = await axios({
         method: 'post',
-        url: `${serverDomain}/todos`,
+        url: `http://localhost:4000/todos`,
         data: {
           title: todoText
         },

@@ -8,7 +8,6 @@ const bodyParser = require('body-parser')
 const authRoutes = require('./routes/authRoutes')
 require('dotenv').config()
 require('./services/passport')
-const clientDomain = require('./utils.js/clientDomain')
 const path = require('path')
 
 const app = express()
@@ -30,7 +29,7 @@ mongoose.connect(process.env.MONGO_URI, {
 
 app.use(cors({
   credentials: true,
-  origin: clientDomain
+  origin: 'http://localhost:3000'
 }))
 
 

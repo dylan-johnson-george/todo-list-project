@@ -1,7 +1,6 @@
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const passport = require('passport')
 const User = require('../models/user')
-const clientDomain = require('../utils.js/clientDomain')
 
 passport.serializeUser(((user, done) => {
   done(null, user.id)
@@ -19,7 +18,7 @@ passport.use(new GoogleStrategy(
   {
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: `${clientDomain}/auth/google/callback`
+    callbackURL: `/auth/google/callback`
   },
   function(accessToken, refreshToken, profile, done) {
     User.findOne({googleId: profile.id}).then((existingUser) => {

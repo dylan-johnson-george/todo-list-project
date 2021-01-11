@@ -1,5 +1,4 @@
 import axios from 'axios'
-import serverDomain from '../../utils.js/serverDomain'
 
 export const logIn = () => {
   return {
@@ -38,7 +37,7 @@ export const fetchTodosError = error => {
 export const fetchTodos = () => {
   return (dispatch) => {
     dispatch(fetchTodosRequest)
-    axios.get(`${serverDomain}/todos`, {withCredentials: true})
+    axios.get(`http://localhost:4000/todos`, {withCredentials: true})
     .then(response => {
       const todos = response.data
       dispatch(fetchTodosSuccess(todos))

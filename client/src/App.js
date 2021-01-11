@@ -5,7 +5,6 @@ import LoginPage from '../src/containers/LoginPage'
 import axios from 'axios'
 import { Route, Switch, useHistory } from 'react-router-dom' 
 import TasksPage from './containers/TasksPage'
-import serverDomain from './utils.js/serverDomain'
 
 function App() {  
   const isUserLoggedIn = useSelector(state => state.isAuthenticated)
