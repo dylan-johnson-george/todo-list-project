@@ -45,7 +45,7 @@ const ListItem = (props) => {
 
   return (
   <li className='list-unstyled bg-white border p-2 m-2 rounded list-item shadow-sm'>
-    <div className='d-block'>
+    <div className='d-block word-wrap'>
       {!props.completed && 
       <i className='fas fa-check-circle complete-icon cursor-pointer' onClick={clickToComplete}></i> 
       } 
