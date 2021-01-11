@@ -43,11 +43,11 @@ const TasksPage = () => {
     <div>
       <Navbar />
       <div className='container text-center mt-5 pt-5 border shadow-sm bg-white w-75'>
-        <h2 className="text-muted">What's on today?</h2>
+        <h2 className='text-muted'>What's on today?</h2>
         <form className='form-inline' onSubmit={handleSubmit}>
-          <div class="form-group mb-5 form-inline">
-            <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Add task!" onChange={handleChange}/>
-            <button type="submit" class="btn btn-primary  mt-2">Submit</button>
+          <div class='form-group mb-5 form-inline'>
+            <input type='text' className='form-control' placeholder='Add task!' onChange={handleChange}/>
+            <button type='submit' class='btn btn-primary mt-2'>Submit</button>
           </div>
         </form>
       </div>
