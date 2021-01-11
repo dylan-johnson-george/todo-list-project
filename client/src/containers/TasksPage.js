@@ -18,7 +18,7 @@ const TasksPage = () => {
     try {
       const newTodo = await axios({
         method: 'post',
-        url: `http://localhost:4000/todos`,
+        url: `/todos`,
         data: {
           title: todoText
         },

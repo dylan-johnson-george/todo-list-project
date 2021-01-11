@@ -37,7 +37,7 @@ export const fetchTodosError = error => {
 export const fetchTodos = () => {
   return (dispatch) => {
     dispatch(fetchTodosRequest)
-    axios.get(`http://localhost:4000/todos`, {withCredentials: true})
+    axios.get(`/todos`, {withCredentials: true})
     .then(response => {
       const todos = response.data
       dispatch(fetchTodosSuccess(todos))

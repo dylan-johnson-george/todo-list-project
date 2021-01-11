@@ -10,7 +10,7 @@ const ListItem = (props) => {
   const clickToComplete = async (e) => {    
     await axios({
       method: 'put',
-      url: `http://localhost:4000/todos`,
+      url: `/todos`,
       data: {
         id: props.id
 
@@ -28,7 +28,7 @@ const ListItem = (props) => {
     try {
       await axios({
         method: 'delete',
-        url: `http://localhost:4000/todos`,
+        url: `/todos`,
         data: {
           id: props.id
         },
