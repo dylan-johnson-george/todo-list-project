@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { logOut } from '../redux/actions/index'
-import serverDomain from '../utils.js/serverDomain'
 
 const Navbar = (props) => {
   const dispatch = useDispatch()
