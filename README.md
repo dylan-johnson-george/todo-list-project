@@ -14,7 +14,7 @@ To start the project locally, in the root, you can run:
 Then open a new terminal tab and run: 
 
 ### `cd client`
-### `npm run dev`
+### `npm start`
 
 This will start both the front and back end in development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
